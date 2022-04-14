@@ -1,17 +1,18 @@
-package main.datastructure;
+package main.BasicProgramming;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-class TwoRooks {
+class WaterSports {
     public static void main(String[] args) throws IOException {
         int T, t;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         T = Integer.parseInt(br.readLine());
-        for (t = 0; t < T; t++) {
+        while (T-- > 0) {
             String[] arr = br.readLine().split(" ");
-            if (arr[0].equals(arr[2]) || arr[1].equals(arr[3])) {
+            Integer bal = Integer.parseInt(arr[0]) - Integer.parseInt(arr[1]);
+            if (bal >= Integer.parseInt(arr[2]) + Integer.parseInt(arr[3]) + Integer.parseInt(arr[4])) {
                 System.out.println("YES");
             } else {
                 System.out.println("NO");
