@@ -1,5 +1,8 @@
 package main.experiment;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class GetClass {
     public static void main(String[] args) throws NoSuchMethodException {
         var a = new Integer(1);
@@ -8,5 +11,6 @@ public class GetClass {
         System.out.println(a);
         System.out.println(b);
         System.out.println(c);
+        System.out.println(Arrays.stream("adarspartyadarparty".split("party")).collect(Collectors.toList()));
     }
 }
